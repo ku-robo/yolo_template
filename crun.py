@@ -18,18 +18,21 @@ for dir_name in sorted(os.listdir(dir_dataset)):
         # 汇总类型
         classes_total.append(dir_name.lstrip(string.digits).capitalize())
 
-        print('find images: ' +
-              classes_total[-1] + '  index: ' + str(len(classes_total)-1))
-
+        
         # 找出所有 图片 路径
         dir_images = os.path.join(dir_data, 'images')
         files_images = os.listdir(dir_images)
+        now_count=0
         for file_img in files_images:
             file_label = os.path.splitext(file_img)[0]+'.txt'
             path_img = os.path.join(dir_images, file_img)
             path_label = os.path.join(dir_images, '../labels', file_label)
             if(os.path.exists(path_label)):
+                now_count+=1
                 lables_total.append(path_img)
+        print('find images: ' +
+              classes_total[-1] + '  index: ' + str(len(classes_total)-1) + ' count: ' + str(now_count))
+
 
 # 汇总结果到 train.txt 中
 with open('./train.txt', 'w+') as f:
