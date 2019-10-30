@@ -1,6 +1,6 @@
 
 训练图片时把图片放到 `pictures/{两位数字+英文类型名称}/images/{图片名称}.jpg`
-对应的annotation 放到 `pictures/{两位数字+英文类型名称}/lables/{图片名称}.txt`
+对应的annotation 放到 `pictures/{两位数字+英文类型名称}/labels/{图片名称}.txt`
 
 `{图片名称}.txt` 文件中的头两个数字 必须和 文件夹的两位数字 一致 必须是连续数字
 
