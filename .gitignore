@@ -1,1 +1,2 @@
-weights/yolov3-voc.backup
+/weights/*
+!/weights/download_default_weight.sh
