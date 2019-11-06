@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 #coding=utf-8
 
 import os
@@ -5,7 +6,7 @@ import re
 import string
 
 dir_dataset = './pictures'
-path_cfg = './yolov3-voc.cfg'
+path_cfg = './main.cfg'
 
 
 # 遍历 dataset 目录
